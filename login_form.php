@@ -7,6 +7,9 @@ include 'dbtext.php';
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link rel="stylesheet" href="styles.css">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +36,7 @@ include 'dbtext.php';
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                    <h3 class="text-center text-info"><img src= "/img/w.jpeg" ></h3>
+                    <h3 class="text-center text-info"><img src= "/img/w.jpg" ></h3>
                         <p class="text-info">Nombre de usuario: <br>
                             <input class="form-control" type="text" name="username"></p>
                         <p class="text-info" class="Password">Password: <br>
@@ -43,6 +46,17 @@ include 'dbtext.php';
                 </div>
             </div>
         </div>
+        
+	<div class="container">
+		<ul class="social-icons">
+			<li><a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+			<li><a href="https://aboutme.google.com/u/0/"><i class="fab fa-google-plus-g"></i></a></li>
+		</ul>
+	</div>
+	</div>
+
 </body>
 
 </html>

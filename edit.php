@@ -18,7 +18,7 @@ if (isset ($_POST['nombre'])  && isset($_POST['color']) && isset($_POST['marca']
   $sql = 'UPDATE producto SET nombre=:name, color=:email, marca=:marca, precio=:precio, existencias=:existencias WHERE id=:id';
   $statement = $connection->prepare($sql);
   if ($statement->execute([':name' => $name, ':email' => $email,':marca'=>$marca, ':precio'=>$precio,'existencias'=>$existencias, ':id' => $id])) {
-    header("Location: /");
+    header("Location: /admin_principal.php");
   }
   
 

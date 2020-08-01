@@ -14,6 +14,17 @@ if (isset ($_POST['username']) && isset($_POST['privilegios']) && isset($_POST['
   $email = $_POST['email'];
   $password = $_POST['password'];
   $password=md5($password);
+  $nuevo_usuario=mysqli_query($mysqli,"SELECT username from usuarios where username='$username'");
+if(mysqli_num_rows($nuevo_usuario)>0)
+{
+  echo "<script>alert('Este usuario ya existe');</script>";
+  
+}else{
+  $nuevo_usuario=mysqli_query($mysqli,"SELECT correo_user from usuarios where correo_user='$email'");
+if(mysqli_num_rows($nuevo_usuario)>0)
+{
+  echo "<script>alert('Este correo ya existe');</script>";
+}else{
   //$sql = 'INSERT INTO producto(nombre,color,marca,precio,existencias,tipo,status) VALUES(:name, :email,:marca,:precio,:existencias,:tipo,1)';
   $sql = 'INSERT INTO usuarios (username,correo_user,pass_user,privilegios_user,status_user) VALUES(:username, :email, :password,:privilegios,1)';
   $statement = $connection->prepare($sql);
@@ -26,6 +37,12 @@ if (isset ($_POST['username']) && isset($_POST['privilegios']) && isset($_POST['
     echo $email;
     echo $password;
   }
+
+}
+  
+
+}
+  
 
 }
 
